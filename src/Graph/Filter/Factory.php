@@ -1,12 +1,4 @@
 <?php
-/**
- *
- * @author j
- * Date: 3/7/15
- * Time: 1:18 PM
- *
- * File: FilterFactory.php
- */
 namespace chilimatic\lib\Datastructure\Graph\Filter;
 use chilimatic\lib\Interfaces\IFlyWeightTransformer;
 use chilimatic\lib\Interfaces\IFlyWeightValidator;

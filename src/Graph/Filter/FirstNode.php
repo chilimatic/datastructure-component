@@ -1,12 +1,4 @@
 <?php
-/**
- *
- * @author j
- * Date: 3/11/15
- * Time: 9:07 PM
- *
- * File: FirstNode.php
- */
 namespace chilimatic\lib\Datastructure\Graph\Filter;
 
 use chilimatic\lib\Traits\Comperator\StringValueBiggerThan;
