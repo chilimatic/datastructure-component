@@ -3,7 +3,7 @@
   "description": "datastructure component within the chilimatic framework",
   "type": "library",
   "license": "MIT",
-  "version": "2.0.0",
+  "version": "1.0.1",
   "authors": [
     {
       "name": "Jakob Oberhummer",
@@ -13,8 +13,8 @@
   "minimum-stability": "stable",
   "require": {
     "php": ">=5.4",
-    "chilimatic/interfaces-component": "2.*",
-    "chilimatic/traits-component"    : "2.*"
+    "chilimatic/interfaces-component": "1.*",
+    "chilimatic/traits-component"    : "1.*"
   },
   "require-dev": {
     "phpunit/phpunit": "4.8.*"

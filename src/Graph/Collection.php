@@ -55,7 +55,7 @@ class Collection
      *
      * @return int
      */
-    public function count() : int
+    public function count()
     {
         return count($this->list);
     }
@@ -139,7 +139,7 @@ class Collection
      *
      * @return mixed|null
      */
-    public function getById(string $id)
+    public function getById($id)
     {
         if (isset($this->idList[$id])) {
             return $this->idList[$id];
@@ -156,7 +156,7 @@ class Collection
      *
      * @return \SplDoublyLinkedList()|null
      */
-    public function getByIdFuzzy(string $key)
+    public function getByIdFuzzy($key)
     {
         if (!$key) {
             return null;
@@ -179,7 +179,7 @@ class Collection
      *
      * @return mixed
      */
-    public function getLastByKey(string $key)
+    public function getLastByKey($key)
     {
         if (!isset($this->keyList[$key])) {
             return null;
@@ -198,7 +198,7 @@ class Collection
      *
      * @return mixed
      */
-    public function getByKey(string $key, \chilimatic\lib\Datastructure\Graph\Filter\AbstractFilter $filter = null)
+    public function getByKey($key, \chilimatic\lib\Datastructure\Graph\Filter\AbstractFilter $filter = null)
     {
 
         $result = new \SplObjectStorage();
@@ -236,7 +236,7 @@ class Collection
      *
      * @return $this
      */
-    public function setIdList($idList) : self
+    public function setIdList($idList)
     {
         $this->idList = $idList;
 
@@ -256,7 +256,7 @@ class Collection
      *
      * @return $this
      */
-    public function setKeyList($keyList) : self
+    public function setKeyList($keyList)
     {
         $this->keyList = $keyList;
 
@@ -276,7 +276,7 @@ class Collection
      *
      * @return $this
      */
-    public function removeAll() : self
+    public function removeAll()
     {
         $this->list = array();
 
@@ -290,7 +290,7 @@ class Collection
      *
      * @return $this
      */
-    public function removeNode(Node $node = null) : bool
+    public function removeNode(Node $node = null)
     {
         if (!$node) {
             return true;

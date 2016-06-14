@@ -57,7 +57,7 @@ class Factory
      *
      * @return $this
      */
-    public function setValidator(IFlyWeightValidator $validator) : self
+    public function setValidator(IFlyWeightValidator $validator)
     {
         $this->validator = $validator;
 
@@ -77,7 +77,7 @@ class Factory
      *
      * @return $this
      */
-    public function setTransformer(IFlyWeightTransformer $transformer) : self
+    public function setTransformer(IFlyWeightTransformer $transformer)
     {
         $this->transformer = $transformer;
 

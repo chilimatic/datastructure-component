@@ -16,14 +16,14 @@ interface INode
      * @param $data
      * @param string $comment
      */
-    public function __construct(INode $parentNode = null, string $key, $data, string $comment = '');
+    public function __construct(INode $parentNode = null, $key, $data, $comment = '');
 
     /**
      * @param $id
      *
      * @return mixed
      */
-    public function getById(string $id);
+    public function getById($id);
 
     /**
      * @param mixed $key
@@ -32,12 +32,12 @@ interface INode
      *
      * @return mixed
      */
-    public function getByKey (string $key, AbstractFilter $filter = null);
+    public function getByKey ($key, AbstractFilter $filter = null);
 
     /**
      * @param mixed $key
      *
      * @return mixed
      */
-    public function getLastByKey(string $key);
+    public function getLastByKey($key);
 }

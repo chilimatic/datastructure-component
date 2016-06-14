@@ -79,7 +79,7 @@ class Node implements INode
      * @param $data
      * @param string $comment
      */
-    public function __construct(INode $parentNode = null,string $key, $data,string $comment = '')
+    public function __construct(INode $parentNode = null,$key, $data,$comment = '')
     {
         // set the parent node
         $this->parentNode = $parentNode;
@@ -126,7 +126,7 @@ class Node implements INode
     /**
      * @return string
      */
-    public function __toString() : string
+    public function __toString()
     {
         return json_encode($this->getData());
     }
@@ -140,7 +140,7 @@ class Node implements INode
      *
      * @return \SplObjectStorage
      */
-    public function getByKey(string $key, AbstractFilter $filter = null)
+    public function getByKey($key, AbstractFilter $filter = null)
     {
         return $this->children->getByKey($key, $filter);
     }
@@ -150,7 +150,7 @@ class Node implements INode
      *
      * @return Node|null
      */
-    public function getLastByKey(string $key)
+    public function getLastByKey($key)
     {
         if ($this->key == $key) {
             return $this;
@@ -168,7 +168,7 @@ class Node implements INode
      *
      * @return Node|null
      */
-    public function getById(string $id)
+    public function getById($id)
     {
         if ($this->id == $id) {
             return $this;
@@ -209,7 +209,7 @@ class Node implements INode
      *
      * @return $this
      */
-    public function setParent(Node $node = null) : self
+    public function setParent(Node $node = null)
     {
         $this->parentNode = $node;
 
@@ -243,7 +243,7 @@ class Node implements INode
      *
      * @return $this
      */
-    public function setId(string $id) : self
+    public function setId(string $id)
     {
         $this->id = $id;
 
@@ -267,7 +267,7 @@ class Node implements INode
      *
      * @return $this
      */
-    public function setKey(string $key) : self
+    public function setKey(string $key)
     {
         $this->key = $key;
 
@@ -281,7 +281,7 @@ class Node implements INode
      *
      * @return $this
      */
-    public function addChild(Node $node) : self
+    public function addChild(Node $node)
     {
         $this->children->addNode($node);
 
@@ -328,7 +328,7 @@ class Node implements INode
      *
      * @return $this
      */
-    public function delete() : self
+    public function delete()
     {
         $this->parentNode->children->removeNode($this);
 
