@@ -36,7 +36,7 @@ class BinaryNode
      * @param string $key
      * @param null $data
      */
-    public function __construct(string $key, $data = null)
+    public function __construct($key, $data = null)
     {
         $this->key = $key;
         $this->data = $data;
@@ -55,7 +55,7 @@ class BinaryNode
      *
      * @return mixed|null
      */
-    public function findByKey(string $key, &$result = false)
+    public function findByKey($key, &$result = false)
     {
         if ($result) {
             return $result;
@@ -92,7 +92,7 @@ class BinaryNode
      *
      * @return $this
      */
-    public function setKey(string $key)
+    public function setKey($key)
     {
         $this->key = $key;
 

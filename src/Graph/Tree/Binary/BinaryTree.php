@@ -24,7 +24,7 @@ class BinaryTree
      * @param $key
      * @param $data
      */
-    public function insert(string $key, $data) {
+    public function insert($key, $data) {
         $node = new BinaryNode($key, $data);
 
         if ($this->root === null) {
@@ -55,7 +55,7 @@ class BinaryTree
      *
      * @return mixed|null
      */
-    public function findByKey(string $key) {
+    public function findByKey($key) {
         if (!$this->root) {
             return null;
         }

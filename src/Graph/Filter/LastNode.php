@@ -19,7 +19,7 @@ class LastNode extends AbstractFilter
      *
      * @return \SplObjectStorage
      */
-    public function filter($param = null) : \SplObjectStorage
+    public function filter($param = null)
     {
         if (!$param) {
             return new \SplObjectStorage();

@@ -18,7 +18,7 @@ class FirstNode extends AbstractFilter
      *
      * @return mixed
      */
-    public function filter($param = null) : \SplObjectStorage
+    public function filter($param = null)
     {
         if (!$param) {
             return null;
